@@ -4,9 +4,18 @@
 <input type = "text" placeholder="Enter your post" name = "post"/>
 <button type = "Post">Post</button>
 </form>
+<form action = "delete-post" method = "post">
+    <input type = "number" placeholder="Post #" name = "postid"/>
+    <button type = "delete">Delete</button>
+</form>
+<form action = "edit-post" method = "post">
+    <input type = "number" placeholder="Post #" name = "postid"/>
+    <input type = "text" placeholder="Edit Text" name = "editpost"/>
+    <button type = "edit">Edit</button>
+</form>
 Posts by {{name}}!<br>
 {{#posts}}
-{{text}}<br>
+{{id}}. {{text}}<br>
 {{/posts}}
 </body>
 </html>
